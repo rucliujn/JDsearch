@@ -1,7 +1,7 @@
 # JDsearch
 JDsearch: A Personalized Product Search Dataset with Real Queries and Full Interactions
 ### Introduction
-We intoduce JDsearch, a new dataset based on a popular Chinese online shopping platform JD.com. JDsearch dataset contains about 170,000 users, 12,000,000 products, and 22,000,000 interactions between them.  In this dataset, we record user real queries and reserve all products belonging to diverse categories, no matter they are cold products or popular ones.
+We introduce JDsearch, a new dataset based on a popular Chinese online shopping platform JD.com. JDsearch dataset contains about 170,000 users, 12,000,000 products, and 22,000,000 interactions between them.  In this dataset, we record user real queries and reserve all products belonging to diverse categories, no matter they are cold products or popular ones.
 
 Compared with the previous amazon dataset, our JDsearch dataset has following characteristics:
 
