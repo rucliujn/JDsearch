@@ -10,7 +10,7 @@ Compared with the previous amazon dataset, our JDsearch dataset has following ch
 | Queries        | Artificial queries |  Real queries     |
 | Items          | 5-core items belonging to a single category | All items belonging to diverse categories |
 | Users          | 5-core users       | All users with various user history lengths |
-| Interactions   | Purchase           | Click, add to cart, purchase |
+| Interactions   | Purchase           | Click, add to cart, follow, purchase |
 
 ### Dataset Statistics
 
