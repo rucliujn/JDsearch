@@ -87,7 +87,7 @@ TEM | **0.2229** | **0.1049** | **0.2192** |
 
 This repository is liciensed under Apache-2.0 License.
 
-The JDsearch dataset is liciensed under [CC BY-NC 2.0](https://creativecommons.org/licenses/by-nc/2.0/).
+The JDsearch dataset is liciensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 
 
