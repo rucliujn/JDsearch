@@ -46,7 +46,7 @@ The first one is `release_data.txt` which contains the history behavior informat
 
 - query: the anonymized term ids of the last query.
 - candidate_wid_list: the anonymized ids of candidate products displayed under the test query (at most 200 products).
-- candidate_label_list: the corresponding label for the candidate products (0.0 for no interaction, 1.0 for click, 1.5 for add to cart, larger than 2.0 for purchase).
+- candidate_label_list: the corresponding label for the candidate products (0.0 for no interaction, 1.0 for click, 2.0 for add to cart, 3.0 for purchase).
 - history_qry_list: the sequence of anonymized term ids of queries issued by users. (-1 for the query-less behavior)
 - history_wid_list:the sequence of anonymized ids of products in user histories.
 - history_type_list: the sequence of interaction levels in  user histories. (including ORD(purchase), CLICK(click) and CART(add to cart))
@@ -67,6 +67,8 @@ The second one is `product_data.txt` which contains the metadata about products.
 For all the list fileds (end with \'list\') in our files, we concat the element in them with \'\_\' as seperator. For all the fields containing term (history_qry_list,name,brand_name,category_name_{1,2,3,4}), we concat the term id in text with \'\030\' as seperator.
 
 Noticing that there exists some missing products in our dataset, `product_data.txt` doesn't contain metadata about these products.
+
+Some users' `candidate_label_list` may don't have labels > 0. In our experiments, these users are removed from test part. However, their history can still be used to train models.
 
 ### Baseline models
 
