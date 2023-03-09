@@ -50,7 +50,7 @@ The first one is `release_data.txt` which contains the history behavior informat
 - history_qry_list: the sequence of anonymized term ids of queries issued by users. (-1 for the query-less behavior)
 - history_wid_list:the sequence of anonymized ids of products in user histories.
 - history_type_list: the sequence of interaction levels in  user histories. (including ORD(purchase), CLICK(click), CART(add to cart) and FLW(follow))
-- history_time_list: the sequence of time interval after the last behavior in user histories. (the first one is 0) (including the test query, thus the list's length is one more than other history lists)
+- history_time_list: the sequence of time interval after the last behavior in user histories. (the first one is 0) (including the test query, thus the list's length is one more longer than other history lists)
 
 The second one is `product_data.txt` which contains the metadata about products. The format of each line of data in this file is:
 
