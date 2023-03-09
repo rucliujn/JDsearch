@@ -44,13 +44,13 @@ The first one is `release_data.txt` which contains the history behavior informat
 
 `query \t candidate_wid_list \t candidate_label_list \t history_qry_list \t history_wid_list \t history_type_list \t history_time_list \n`
 
-- query: the anonymized term ids of the last query.
+- query: the anonymized term ids of the test query.
 - candidate_wid_list: the anonymized ids of candidate products displayed under the test query (at most 200 products).
 - candidate_label_list: the corresponding label for the candidate products (0.0 for no interaction, 1.0 for click, 2.0 for add to cart, 3.0 for purchase).
 - history_qry_list: the sequence of anonymized term ids of queries issued by users. (-1 for the query-less behavior)
 - history_wid_list:the sequence of anonymized ids of products in user histories.
-- history_type_list: the sequence of interaction levels in  user histories. (including ORD(purchase), CLICK(click) and CART(add to cart))
-- history_time_list: the sequence of time interval after last behavior in user histories. (the first one is 0) 
+- history_type_list: the sequence of interaction levels in  user histories. (including ORD(purchase), CLICK(click), CART(add to cart) and FLW(follow))
+- history_time_list: the sequence of time interval after the last behavior in user histories. (the first one is 0) (including the final test query)
 
 The second one is `product_data.txt` which contains the metadata about products. The format of each line of data in this file is:
 
