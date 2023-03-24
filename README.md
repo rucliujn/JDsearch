@@ -29,8 +29,9 @@ The basic statistics of JDsearch dataset shows as follow:
 #### Obtain the data 
 
 For now we provide download link via JD Cloud 
-[JD Cloud Disk](http://box.jd.com/sharedInfo/CF73552490211634EEC946AFBC5707A7).
-The password is **i4wq3c**.
+[JD Cloud Disk](http://box.jd.com/sharedInfo/3183DCD7A9646677EEC946AFBC5707A7).
+The password is **cm1goz**.
+
 
 #### Dataset Files
 
