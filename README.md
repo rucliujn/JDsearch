@@ -32,6 +32,8 @@ For now we provide download link via JD Cloud
 [JD Cloud Disk](http://box.jd.com/sharedInfo/3183DCD7A9646677EEC946AFBC5707A7).
 The password is **cm1goz**.
 
+If you cannot obtain the dataset through this hyperlink, feel free to contact me through liujn@ruc.edu.cn
+
 
 #### Dataset Files
 
