@@ -48,7 +48,7 @@ The password is **cm1goz**.
 
 The landing page in Chinese is a login page for JD cloud disk. Using the JD mobile application to scan the QR code can obtain the dataset. If you cannot obtain the dataset through this hyperlink, feel free to contact me through liujn@ruc.edu.cn
 
-Samples are shown in this Github.
+Samples are shown in this Github in `release_data_sample.txt` and `product_data_sample.txt`.
 
 
 #### Dataset Files
