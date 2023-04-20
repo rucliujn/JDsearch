@@ -12,6 +12,20 @@ Compared with the previous amazon dataset, our JDsearch dataset has following ch
 | Users          | 5-core users       | All users with various user history lengths |
 | Interactions   | Purchase           | Click, add to cart, follow, purchase |
 
+### Citation
+If you use the dataset in your work, please cite:
+```
+@inproceedings{liu2023JDsearch,
+     author = {Jiongnan Liu and Zhicheng Dou and Guoyu Tang and Sulong Xu}, 
+     title = {JDsearch: A Personalized Product Search Dataset with Real Queries and Full Interactions}, 
+     booktitle = {Proceedings of the {SIGIR} 2023}, 
+     publisher = {{ACM}}, 
+     year = {2023}, 
+     url = {https://doi.org/10.1145/3539618.3591900}, 
+     doi = {10.1145/3539618.3591900}}
+```
+
+
 ### Dataset Statistics
 
 The basic statistics of JDsearch dataset shows as follow:
