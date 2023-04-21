@@ -77,7 +77,7 @@ A pseudo example and its explanation is shown as follows:
 ```
 12^X32^X56     456_457_789    3.0_0.0_0.0    323^X328^X196_-1_12^X54  889_256_345    ORD_CLICK_CART 0_12_4_5
 ```
-- `12^X32^X56`: the test query for the user is `12^X32^X56`
+- `12^X32^X56`: the test query for the user is `12^X32^X56` (`^X` is the seperator).
 - `456_457_789`: the candidate product list under the test query contains three products: `456, 457, 789`.
 - `3.0_0.0_0.0`: the corresponding labels for the three products are `3.0, 0.0, 0.0`. `3.0` means The first candidate product `456` is **purchased** by the user. `0.0` means the other products `457,789` are **not interacted** with users.
 - `323^X328^X196_-1_12^X54`: the history query list of the user is `323^X328^X196, -1, 12^X54`. The middle `-1` means this behavior is a query-less interaction.
