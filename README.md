@@ -83,7 +83,7 @@ An example and its explanation is shown as follows:
 - `323^X328^X196_-1_12^X54`: the history query list of the user is `323^X328^X196, -1, 12^X54`. The middle `-1` means this behavior is a query-less interaction.
 - `889_256_345`: the historical interacted products of the user contains three products: `889, 256, 345`.
 - `ORD_CLICK_CART`: the corresponding inteaction level for the above three interactions in user history. The user first purchased product `889`, then clicked product `256`, and finally added the product `345` to the cart.
-- `0_12_4_5`: the time interval for these four behavoirs (including three history interactions and test search) is `0,12,4,5` respectively.
+- `0_12_4_5`: the time timestamp intervals between these four behavoirs (including three history interactions and test search) is `12, 4, 5` respectively. `0` is for the first behavior.
 
 
 
