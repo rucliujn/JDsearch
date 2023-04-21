@@ -59,9 +59,9 @@ The upload format of the dataset is .tar.gz, you can decompress it as follows:
 
 there will exist two files in our decompressed folder `JDsearch`: `release_data.txt` and `product_data.txt`.
 
-#### `release_data.txt`
+#### (1) release_data.txt
 
-The first one is `release_data.txt` which contains the history behavior information, test query, test query candidates and test labels in it. The format of each line of data in this file is：
+This file contains the history behavior information, test query, test query candidates and test labels in it. The format of each line of data in this file is：
 
 `query \t candidate_wid_list \t candidate_label_list \t history_qry_list \t history_wid_list \t history_type_list \t history_time_list \n`
 
@@ -69,7 +69,7 @@ The first one is `release_data.txt` which contains the history behavior informat
 - candidate_wid_list: the anonymized ids of candidate products displayed under the test query (at most 200 products).
 - candidate_label_list: the corresponding label for the candidate products (0.0 for no interaction, 1.0 for click, 2.0 for add to cart, 3.0 for purchase).
 - history_qry_list: the sequence of anonymized term ids of queries issued by users. (-1 for the query-less behavior)
-- history_wid_list:the sequence of anonymized ids of products in user histories.
+- history_wid_list: the sequence of anonymized ids of products in user histories.
 - history_type_list: the sequence of interaction levels in  user histories. (including ORD(purchase), CLICK(click), CART(add to cart) and FLW(follow))
 - history_time_list: the sequence of time interval after the last behavior in user histories. (the first one is 0) (including the test query, thus the list's length is one more longer than other history lists)
 
@@ -77,12 +77,19 @@ An example and its explanation is shown as follows:
 ```
 12^X32^X56     456_457_789    3.0_0.0_0.0    323^X328^X196_-1_12^X54  889_256_345    ORD_CLICK_CART 0_12_4_5
 ```
-This example means that the test query for the user is `12^X32^X56`, which has three candidate products under it: `456,457,789`. The first candidate product `456` with label `3.0` is purchased by the user, while the other products `457,789` with label `0.0` are not interacted with others. For the history, the user first purchased product `889`, then clicked product `256`, and finally added the product `345` to the cart. The first and last interaction is under query `323^X328^X196` and `12^X54` respectively, while the middle one is query-less interaction.  The time interval for these four behavoirs (including three history interactions and test search) is `0,12,4,5` respectively.
+- `12^X32^X56`: the test query for the user is `12^X32^X56`
+- `456_457_789`: the candidate product list under the test query contains three products: `456, 457, 789`.
+- `3.0_0.0_0.0`: the corresponding labels for the three products are `3.0, 0.0, 0.0`. `3.0` means The first candidate product `456` is **purchased** by the user. `0.0` means the other products `457,789` are **not interacted** with users.
+- `323^X328^X196_-1_12^X54`: the history query list of the user is `323^X328^X196, -1, 12^X54`. The middle `-1` means this behavior is a query-less interaction.
+- `889_256_345`: the historical interacted products of the user contains three products: `889, 256, 345`.
+- `ORD_CLICK_CART`: the corresponding inteaction level for the above three interactions in user history. The user first purchased product `889`, then clicked product `256`, and finally added the product `345` to the cart.
+- `0_12_4_5`: the time interval for these four behavoirs (including three history interactions and test search) is `0,12,4,5` respectively.
 
 
-#### `product_data.txt`
 
-The second one is `product_data.txt` which contains the metadata about products. The format of each line of data in this file is:
+#### (2) product_data.txt
+
+This file contains the metadata about products. The format of each line of data in this file is:
 
 `wid \t name \t brand_id \t brand_name \t cate_id_1 \t cate_name_1 \t cate_id_2 \t cate_name_2 \t cate_id_3 \t cate_name_3 \t cate_id_4 \t cate_name_4 \t shop_id`
 
