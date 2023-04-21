@@ -103,7 +103,7 @@ This file contains the metadata about products. The format of each line of data 
 
 #### Hint
 
-For all the list fileds (end with \'list\') in our files, we concat the element in them with \'\_\' as seperator. For all the fields containing term (history_qry_list,name,brand_name,category_name_{1,2,3,4}), we concat the term id in text with \'\030\' as seperator (viewed as `^X` in vim).
+For all the list fields (end with \'list\') in our files, we concat the element in them with \'\_\' as seperator. For all the fields containing term (history_qry_list,name,brand_name,category_name_{1,2,3,4}), we concat the term id in text with \'\030\' as seperator (viewed as `^X` in vim).
 
 Noticing that there exists some missing products in our dataset, `product_data.txt` doesn't contain metadata about these products.
 
