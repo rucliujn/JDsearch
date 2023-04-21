@@ -1,6 +1,6 @@
 # JDsearch
 JDsearch: A Personalized Product Search Dataset with Real Queries and Full Interactions
-### Introduction
+## Introduction
 We introduce JDsearch, a new dataset based on a popular Chinese online shopping platform JD.com. JDsearch dataset contains about 170,000 users, 12,000,000 products, and 26,000,000 interactions between them.  In this dataset, we record user real queries and reserve all products belonging to diverse categories, no matter they are cold products or popular ones.
 
 Compared with the previous amazon dataset, our JDsearch dataset has following characteristics:
@@ -12,7 +12,7 @@ Compared with the previous amazon dataset, our JDsearch dataset has following ch
 | Users          | 5-core users       | All users with various user history lengths |
 | Interactions   | Purchase           | Click, add to cart, follow, purchase |
 
-### Citation
+## Citation
 If you use the dataset in your work, please cite:
 ```
 @inproceedings{liu2023JDsearch,
@@ -26,7 +26,7 @@ If you use the dataset in your work, please cite:
 ```
 
 
-### Dataset Statistics
+## Dataset Statistics
 
 The basic statistics of JDsearch dataset shows as follow:
 
@@ -38,9 +38,9 @@ The basic statistics of JDsearch dataset shows as follow:
 | #Test Queries           | 171,728       | 
 
 
-### Data Content and Format
+## Data Content and Format
 
-#### Obtain the data 
+### Obtain the data 
 
 For now we provide download link via JD Cloud 
 [JD Cloud Disk](http://box.jd.com/sharedInfo/3183DCD7A9646677EEC946AFBC5707A7).
@@ -48,16 +48,18 @@ The password is **cm1goz**.
 
 The landing page in Chinese is a login page for JD cloud disk. Using the JD mobile application to scan the QR code can obtain the dataset. If you cannot obtain the dataset through this hyperlink, feel free to contact me through liujn@ruc.edu.cn
 
-Samples are shown in this Github in `release_data_sample.txt` and `product_data_sample.txt`.
+Some tiny samples are shown in this Github in `release_data_sample.txt` and `product_data_sample.txt`.
 
 
-#### Dataset Files
+### Dataset Files
 
 The upload format of the dataset is .tar.gz, you can decompress it as follows:
 
 `tar -zxvf JDsearch.tar.gz`
 
 there will exist two files in our decompressed folder `JDsearch`: `release_data.txt` and `product_data.txt`.
+
+#### `release_data.txt`
 
 The first one is `release_data.txt` which contains the history behavior information, test query, test query candidates and test labels in it. The format of each line of data in this file is：
 
@@ -71,6 +73,15 @@ The first one is `release_data.txt` which contains the history behavior informat
 - history_type_list: the sequence of interaction levels in  user histories. (including ORD(purchase), CLICK(click), CART(add to cart) and FLW(follow))
 - history_time_list: the sequence of time interval after the last behavior in user histories. (the first one is 0) (including the test query, thus the list's length is one more longer than other history lists)
 
+An example and its explanation is shown as follows:
+```
+12^X32^X56     456_457_789    3.0_0.0_0.0    323^X328^X196_-1_12^X54  889_256_345    ORD_CLICK_CART 0_12_4_5
+```
+This example means that the test query for the user is `12^X32^X56`, which has three candidate products under it: `456,457,789`. The first candidate product `456` with label `3.0` is purchased by the user, while the other products `457,789` with label `0.0` are not interacted with others. For the history, the user first purchased product `889`, then clicked product `256`, and finally added the product `345` to the cart. The first and last interaction is under query `323^X328^X196` and `12^X54` respectively, while the middle one is query-less interaction.  The time interval for these four behavoirs (including three history interactions and test search) is `0,12,4,5` respectively.
+
+
+#### `product_data.txt`
+
 The second one is `product_data.txt` which contains the metadata about products. The format of each line of data in this file is:
 
 `wid \t name \t brand_id \t brand_name \t cate_id_1 \t cate_name_1 \t cate_id_2 \t cate_name_2 \t cate_id_3 \t cate_name_3 \t cate_id_4 \t cate_name_4 \t shop_id`
@@ -82,6 +93,8 @@ The second one is `product_data.txt` which contains the metadata about products.
 - category_id_{1,2,3,4}: the anonymized ids of the the product's four level categories.
 - category_name_{1,2,3,4}: the anonymized term ids of the product's four level categories.
 - shop_id: the anonymized ids of the product's shop.
+
+#### Hint
 
 For all the list fileds (end with \'list\') in our files, we concat the element in them with \'\_\' as seperator. For all the fields containing term (history_qry_list,name,brand_name,category_name_{1,2,3,4}), we concat the term id in text with \'\030\' as seperator.
 
