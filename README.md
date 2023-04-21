@@ -107,7 +107,7 @@ For all the list fields (end with \'list\') in our files, we concat the element 
 
 Noticing that there exists some missing products in our dataset, `product_data.txt` doesn't contain metadata about these products.
 
-In the history part of data, if a user interacted with mutiple products under a one query, these behaviors will be recorded as multiple interactions.
+In the history part of data, if a user interacted with mutiple products under a one query, these behaviors will be separated to multiple interactions.
 
 Some users' `candidate_label_list` may don't have labels > 0. In our experiments, these users are removed from test part. However, their history can still be used to train models.
 
