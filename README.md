@@ -73,7 +73,7 @@ This file contains the history behavior information, test query, test query cand
 - history_type_list: the sequence of interaction levels in  user histories. (including ORD(purchase), CLICK(click), CART(add to cart) and FLW(follow))
 - history_time_list: the sequence of time interval after the last behavior in user histories. (the first one is 0) (including the test query, thus the list's length is one more longer than other history lists)
 
-An example and its explanation is shown as follows:
+A pseudo example and its explanation is shown as follows:
 ```
 12^X32^X56     456_457_789    3.0_0.0_0.0    323^X328^X196_-1_12^X54  889_256_345    ORD_CLICK_CART 0_12_4_5
 ```
@@ -94,7 +94,7 @@ This file contains the metadata about products. The format of each line of data 
 `wid \t name \t brand_id \t brand_name \t cate_id_1 \t cate_name_1 \t cate_id_2 \t cate_name_2 \t cate_id_3 \t cate_name_3 \t cate_id_4 \t cate_name_4 \t shop_id`
 
 - wid: the anonymized id of the product.
-- name:　the anonymized term ids of the product's name.
+- name: the anonymized term ids of the product's name.
 - brand_id: the anonymized ids of the product's brand.
 - brand_name: the anonymized term ids of the product's brand.
 - category_id_{1,2,3,4}: the anonymized ids of the the product's four level categories.
@@ -103,7 +103,7 @@ This file contains the metadata about products. The format of each line of data 
 
 #### Hint
 
-For all the list fileds (end with \'list\') in our files, we concat the element in them with \'\_\' as seperator. For all the fields containing term (history_qry_list,name,brand_name,category_name_{1,2,3,4}), we concat the term id in text with \'\030\' as seperator.
+For all the list fileds (end with \'list\') in our files, we concat the element in them with \'\_\' as seperator. For all the fields containing term (history_qry_list,name,brand_name,category_name_{1,2,3,4}), we concat the term id in text with \'\030\' as seperator (viewed as `^X` in vim).
 
 Noticing that there exists some missing products in our dataset, `product_data.txt` doesn't contain metadata about these products.
 
