@@ -43,8 +43,8 @@ The basic statistics of JDsearch dataset shows as follow:
 ### Obtain the data 
 
 For now we provide download link via JD Cloud 
-[JD Cloud Disk](http://box.jd.com/sharedInfo/3183DCD7A9646677EEC946AFBC5707A7).
-The password is **cm1goz**.
+[JD Cloud Disk](http://box.jd.com/sharedInfo/A5CF737600012A29EEC946AFBC5707A7).
+The password is **zz4qza**.
 
 The landing page in Chinese is a login page for JD cloud disk. Using the JD mobile application to scan the QR code can obtain the dataset. If you cannot obtain the dataset through this hyperlink, feel free to contact me through liujn@ruc.edu.cn
 
