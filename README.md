@@ -48,7 +48,7 @@ The password is **cm1goz**.
 
 The landing page in Chinese is a login page for JD cloud disk. Using the JD mobile application to scan the QR code can obtain the dataset. If you cannot obtain the dataset through this hyperlink, feel free to contact me through liujn@ruc.edu.cn
 
-Some tiny samples are shown in this Github in `release_data_sample.txt` and `product_data_sample.txt`.
+Some tiny samples are shown in this Github in `user_behavior_data_sample.txt` and `product_meta_data_sample.txt`.
 
 
 ### Dataset Files
@@ -57,9 +57,9 @@ The upload format of the dataset is .tar.gz, you can decompress it as follows:
 
 `tar -zxvf JDsearch.tar.gz`
 
-there will exist two files in our decompressed folder `JDsearch`: `release_data.txt` and `product_data.txt`.
+there will exist two files in our decompressed folder `JDsearch`: `user_behavior_data.txt` and `product_meta_data.txt`.
 
-#### (1) release_data.txt
+#### (1) user_behavior_data.txt
 
 This file contains the history behavior information, test query, test query candidates and test labels in it. The format of each line of data in this file is：
 
@@ -87,7 +87,7 @@ A pseudo example and its explanation is shown as follows:
 
 
 
-#### (2) product_data.txt
+#### (2) product_meta_data.txt
 
 This file contains the metadata about products. The format of each line of data in this file is:
 
@@ -105,7 +105,7 @@ This file contains the metadata about products. The format of each line of data 
 
 For all the list fields (end with \'list\') in our files, we concat the element in them with \'\_\' as seperator. For all the fields containing term id (query, history_qry_list,name,brand_name,category_name_{1,2,3,4}), we concat the term id in text with \'\030\' as seperator (viewed as `^X` in vim).
 
-Noticing that there exists some missing products in our dataset, `product_data.txt` doesn't contain metadata about these products.
+Noticing that there exists some missing products in our dataset, `product_meta_data.txt` doesn't contain metadata about these products.
 
 In the history part of data, if a user interacted with mutiple products under a one query, these behaviors will be separated to multiple interactions.
 
